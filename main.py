@@ -4,6 +4,7 @@ import uvicorn
 import time
 
 from services.UserSys import router as user_router
+from services.ProblemLibSys import router as problem_router
 
 def main():
 	app = FastAPI()
@@ -18,6 +19,7 @@ def main():
 	)
 
 	app.include_router(router=user_router, prefix='/user')
+	app.include_router(router=problem_router, prefix='/problem')
 
 	uvicorn.run(app, host='127.0.0.1', port=8081)
 
