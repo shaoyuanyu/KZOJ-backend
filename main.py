@@ -3,9 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import time
 
-from services.UserSys import router as user_router
-from services.ProblemLibSys import router as problem_router
-from services.SubmissionSys import router as submission_router
+from src.services import user_router, problem_router, submission_router
 
 def main():
 	app = FastAPI()
