@@ -26,7 +26,7 @@ class Problem(BaseModel):
 	id: str
 	creater: User
 	title: str
-	content: str
+	content: List[str]
 	remark: str
 	tags: List[str]
 	submitCount: int
@@ -36,3 +36,8 @@ class Problem(BaseModel):
 	exampleCases: List[ExampleCase]
 	refAnswer: str
 	createTime: str
+
+	difficultLevel: str
+	source: str
+	inputDiscription: str
+	outputDiscription: str
