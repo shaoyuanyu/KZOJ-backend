@@ -23,7 +23,7 @@ class JudgeCase(BaseModel):
 
 # 题目
 class Problem(BaseModel):
-	problemId: str
+	id: str
 	creater: User
 	title: str
 	content: str
@@ -31,8 +31,8 @@ class Problem(BaseModel):
 	tags: List[str]
 	submitCount: int
 	acceptedCount: int
-	exampleCase: List[ExampleCase]
 	judgeConfig: List[JudgeConfig]
-	judgeCase: List[JudgeCase]
+	judgeCases: List[JudgeCase]
+	exampleCases: List[ExampleCase]
 	refAnswer: str
 	createTime: str

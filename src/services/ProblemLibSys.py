@@ -12,7 +12,7 @@ def addProblem():
 @router.get('/{given_id}', summary="获取题目")
 def queryProblem(given_id: str):
 	problem = Problem(
-		problemId = given_id,
+		id = given_id,
 		creater = User(id="000001", userName="TESTER", avatarUrl="", email="xxx@kzoj.cn", auth=AuthLevel.ADMIN),
 		title = "TEST PROBLEM TITLE",
 		content = """ TEST PROBLEM CONTENT :) """,
@@ -20,18 +20,18 @@ def queryProblem(given_id: str):
 		tags = ["TEST", "EASY"],
 		submitCount = 100,
 		acceptedCount = 1,
-		exampleCase = [
-			ExampleCase(caseIn="0", caseOut="0001")
-		],
 		judgeConfig = [
 			JudgeConfig(language="C/C++", timeLimit=300.0, memoryLimit=20.0),
 			JudgeConfig(language="Python", timeLimit=300.0, memoryLimit=20.0),
 			JudgeConfig(language="Others", timeLimit=300.0, memoryLimit=20.0)
 		],
-		judgeCase = [
+		judgeCases = [
 			JudgeCase(caseIn="0", caseOut="0001"),
 			JudgeCase(caseIn="1", caseOut="0002"),
 			JudgeCase(caseIn="100", caseOut="0101")
+		],
+		exampleCases = [
+			ExampleCase(caseIn="0", caseOut="0001")
 		],
 		refAnswer = """ print("...") """,
 		createTime = "2023/10/11"
