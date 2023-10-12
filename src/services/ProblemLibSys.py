@@ -24,8 +24,10 @@ def queryProblem(given_id: str):
 		submitCount = 100,
 		acceptedCount = 1,
 		judgeConfig = [
-			JudgeConfig(language="C/C++", timeLimit=300.0, memoryLimit=20.0),
+			JudgeConfig(language="C", timeLimit=300.0, memoryLimit=20.0),
+			JudgeConfig(language="C++", timeLimit=300.0, memoryLimit=20.0),
 			JudgeConfig(language="Python", timeLimit=301.0, memoryLimit=21.0),
+			JudgeConfig(language="Java", timeLimit=301.0, memoryLimit=21.0),
 			JudgeConfig(language="Others", timeLimit=30.0, memoryLimit=2.0)
 		],
 		judgeCases = [
@@ -37,7 +39,7 @@ def queryProblem(given_id: str):
 		refAnswer = """print("Hello,World!")""",
 		createTime = "2023/10/11",
 
-		difficultLevel = "easy",
+		difficultLevel = "1",
 		source = "一本通",
 		inputDiscription = "无输入",
 		outputDiscription = "输出字符串Hello,World!"
