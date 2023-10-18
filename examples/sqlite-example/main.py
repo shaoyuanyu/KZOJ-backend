@@ -1,5 +1,4 @@
 import sqlite3
-from models.singleton import Singleton
 from models.account import Account
 
 # 账号数据库类
