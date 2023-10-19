@@ -122,7 +122,7 @@ class AccountDB():
 def main():
 	accountDB = AccountDB("./accoutDatabase.db")
 	account = Account(id="stu001", userName="testAccount", avatarUrl="", email="xxx@kzoj.cn", auth=1)
-	# print(accountDB.addAccount(account))
+	print(accountDB.addAccount(account))
 	# print(accountDB.queryAccountById("stu000"))
 	# print(accountDB.queryAccountById("stu001"))
 	# print(accountDB.removeAccountById("stu000"))
