@@ -11,17 +11,14 @@ class ProblemPreview(BaseModel):
 	submitCount: int
 	acceptedCount: int
 
-# 题目队列查询
+# 题目预览队列查询
 class ProblemPreviewsQuery(BaseModel):
     # 排序依据
     sortedBy: str
     # 是否正序
-    orderASC: bool
+    #orderASC: bool
+    orderASC: str
 
     # 序列始终
     rangeStart: int
     rangeEnd: int
-
-    # 题目列表
-    problemPreviewList: List[ProblemPreview]
-

@@ -21,7 +21,7 @@ def main():
 	app.include_router(router=problem_router, prefix='/problem')
 	app.include_router(router=submission_router, prefix='/submission')
 
-	uvicorn.run(app, host='127.0.0.1', port=8081)
+	uvicorn.run(app, host='127.0.0.1', port=10086)
 
 if __name__ == '__main__':
 	try:

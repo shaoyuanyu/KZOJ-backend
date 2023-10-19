@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from ..models.Problem import Problem, JudgeConfig, ExampleCase, JudgeCase
+from ..models.ProblemPreview import ProblemPreviewsQuery
 from ..models.User import User
 from ..models.AuthLevel import AuthLevel
 
@@ -12,12 +13,15 @@ router = APIRouter()
 def addProblem():
 	pass
 
-@router.get('/{given_id}', summary="获取题目")
+@router.get('/getProblem/{given_id}', summary="获取题目")
 def queryProblem(given_id: str):
+	print("queryProblem", given_id)
 	return getExampleProblem()
 
-@router.get('/getPreviews', summary="获取题目预览队列")
-def queryProblemPreviews(sorted_by: str, order_asc: bool, range_start: int, range_end: int):
+@router.post('/getPreviews', summary="获取题目预览队列")
+def queryProblemPreviews(problemPreviewsQuery: ProblemPreviewsQuery):
+	print("queryProblemPreviews")
+	print(problemPreviewsQuery)
 	return getExampleProblemPreviews()
 
 @router.delete('/delete', summary="根据id删除题目")
