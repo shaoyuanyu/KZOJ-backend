@@ -29,12 +29,16 @@ class Problem(BaseModel):
 	content: List[str]
 	remark: str
 	tags: List[str]
+
 	submitCount: int
 	acceptedCount: int
+
 	judgeConfig: List[JudgeConfig]
 	judgeCases: List[JudgeCase]
 	exampleCases: List[ExampleCase]
+
 	refAnswer: str
+
 	createTime: str
 
 	difficultLevel: str
