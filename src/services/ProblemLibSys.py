@@ -15,12 +15,10 @@ def addProblem():
 
 @router.get('/getProblem/{given_id}', summary="获取题目")
 def queryProblem(given_id: str):
-	print("queryProblem", given_id)
 	return getExampleProblem()
 
 @router.post('/getPreviews', summary="获取题目预览队列")
 def queryProblemPreviews(problemPreviewsQuery: ProblemPreviewsQuery):
-	print("queryProblemPreviews")
 	print(problemPreviewsQuery)
 	return getExampleProblemPreviews()
 

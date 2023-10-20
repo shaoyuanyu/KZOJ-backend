@@ -16,8 +16,7 @@ class ProblemPreviewsQuery(BaseModel):
     # 排序依据
     sortedBy: str
     # 是否正序
-    #orderASC: bool
-    orderASC: str
+    orderASC: bool
 
     # 序列始终
     rangeStart: int
