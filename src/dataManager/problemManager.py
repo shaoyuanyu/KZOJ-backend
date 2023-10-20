@@ -4,6 +4,8 @@ from ..models.User import User
 from ..models.Problem import Problem, JudgeConfig, ExampleCase, JudgeCase
 from ..models.AuthLevel import AuthLevel
 
+import random
+
 # 后面改为以单例形式实现
 
 problem = Problem(
@@ -53,4 +55,16 @@ def getExampleProblem():
     return problem
 
 def getExampleProblemPreviews():
-    return [problemPreview]*20
+    problemPreviewList = []
+    
+    for i in range(0, 20):
+        problemPreviewList.append(ProblemPreview(
+			id = "p{:04d}".format(random.randint(1, 100)),
+			title = "test problem",
+			createTime = "2023/{}/{}".format(random.randint(1, 12), random.randint(1, 30)),
+			tags = ["test", "easy"],
+			submitCount = random.randint(100, 500),
+			acceptedCount = random.randint(1, 100)
+		))
+    
+    return problemPreviewList
